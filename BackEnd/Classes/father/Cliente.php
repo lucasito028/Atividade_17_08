@@ -1,14 +1,13 @@
 <?php
 
-include ('../Connect/DatabaseConnect.php');
+include ('../../Connect/DatabaseConnect.php');
 
-class Cliente extends DatabaseConnect{
+abstract class Cliente extends DatabaseConnect{
     function create(){
             echo "criando";
     }
-    function read(){
-            echo "lendo";
-    }
+    abstract function read();
+    
     function delete(){
             echo "deletando";
     }
