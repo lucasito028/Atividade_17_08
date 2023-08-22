@@ -13,7 +13,9 @@ abstract class DatabaseConnect{
     public function connect(): ?PDO {
         try {
             $this->conn = new PDO(
-                "mysql:host={$this->host};port={$this->port};dbname={$this->db}",
+                "mysql:host={$this->host};
+                port={$this->port};
+                dbname={$this->db}",
                 $this->user,
                 $this->pass
             );
