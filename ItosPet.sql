@@ -110,7 +110,22 @@ values
 ('Alexander', 'Anderson'),
 ('Ava', 'Thomas'),
 ('Ethan', 'Martinez'),
-('Isabella', 'Robinson');
+('Isabella', 'Robinson'),
+
+('Doe', 'John'),
+('Smith', 'Jane'),
+('Johnson', 'Michael'),
+('Williams', 'Emily'),
+('Brown', 'William'),
+('Jones', 'Olivia'),
+('Miller', 'James'),
+('Davis', 'Sophia'),
+('Wilson', 'Liam'),
+('Taylor', 'Emma'),
+('Anderson', 'Alexander'),
+('Thomas', 'Ava'),
+('Martinez', 'Ethan'),
+('Robinson', 'Isabelle');
 
 
 
@@ -124,4 +139,8 @@ insert into RACA (NOMERACA, TIPO_ID) values ('Bulldog', 1);
 insert into RACA (NOMERACA, TIPO_ID) values ('Vira Lata', 1);
 
 insert into RACA (NOMERACA, TIPO_ID) values ('Mial', 2);
+insert into RACA (NOMERACA, TIPO_ID) values ('Abyssinian', 2);
+insert into RACA (NOMERACA, TIPO_ID) values ('Aegean', 2);
+insert into RACA (NOMERACA, TIPO_ID) values ('Arabian Mau', 2);
+
 
