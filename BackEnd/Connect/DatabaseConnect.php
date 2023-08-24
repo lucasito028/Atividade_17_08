@@ -8,7 +8,7 @@ abstract class DatabaseConnect{
     protected $pass = "";
     protected $port = 3007;
     protected $db = "itospet";
-    protected $conn = null;
+    protected object $conn = null;
 
     public function connect(): ?PDO {
         try {
@@ -31,7 +31,10 @@ abstract class DatabaseConnect{
     
     
     abstract function create();
+
     abstract function read();
+
     abstract function alter();
+    
     abstract function delete();
 }

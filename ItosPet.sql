@@ -2,11 +2,20 @@ create database itospet;
 
 use itospet;
 
+create table TIPOCLIENTE(
+    IDTIPOCLIENTE int not null auto_increment,
+    NOMETIPOCLIENTE varchar(45) not null,
+    primary key(IDTIPOCLIENTE)
+);
+
+
 create table CLIENTE(
 IDCLIENTE int not null auto_increment,
+FKIDTIPOCLIENTE int not null,
 NOMECLIENTE varchar(45) not null,
 SOBRENOME varchar(45) not null,
 primary key(IDCLIENTE),
+foreign key(FKIDTIPOCLIENTE) references TIPOCLIENTE(IDTIPOCLIENTE),
 index NOMECOMPLETO (NOMECLIENTE, SOBRENOME));
 
 
@@ -95,37 +104,41 @@ create table ITEMVENDA(
     foreign key(FK_IDVENDA) references VENDA(IDVENDA)
 );
 
-insert into CLIENTE(NOMECLIENTE, SOBRENOME) 
-values 
-('John', 'Doe'),
-('Jane', 'Smith'),
-('Michael', 'Johnson'),
-('Emily', 'Williams'),
-('William', 'Brown'),
-('Olivia', 'Jones'),
-('James', 'Miller'),
-('Sophia', 'Davis'),
-('Liam', 'Wilson'),
-('Emma', 'Taylor'),
-('Alexander', 'Anderson'),
-('Ava', 'Thomas'),
-('Ethan', 'Martinez'),
-('Isabella', 'Robinson'),
+insert into TIPOCLIENTE(NOMETIPOCLIENTE) VALUES ('Normal'),
+('VIP'),
+('Banana');
 
-('Doe', 'John'),
-('Smith', 'Jane'),
-('Johnson', 'Michael'),
-('Williams', 'Emily'),
-('Brown', 'William'),
-('Jones', 'Olivia'),
-('Miller', 'James'),
-('Davis', 'Sophia'),
-('Wilson', 'Liam'),
-('Taylor', 'Emma'),
-('Anderson', 'Alexander'),
-('Thomas', 'Ava'),
-('Martinez', 'Ethan'),
-('Robinson', 'Isabelle');
+insert into CLIENTE(FKIDTIPOCLIENTE, NOMECLIENTE, SOBRENOME) 
+values 
+(1, 'John', 'Doe'),
+(1 ,'Jane', 'Smith'),
+(1, 'Michael', 'Johnson'),
+(2, 'Emily', 'Williams'),
+(3, 'William', 'Brown'),
+(2, 'Olivia', 'Jones'),
+(3, 'James', 'Miller'),
+(1, 'Sophia', 'Davis'),
+(1, 'Liam', 'Wilson'),
+(1, 'Emma', 'Taylor'),
+(1, 'Alexander', 'Anderson'),
+(2, 'Ava', 'Thomas'),
+(3, 'Ethan', 'Martinez'),
+(3, 'Isabella', 'Robinson'),
+
+(1, 'Doe', 'John'),
+(2, 'Smith', 'Jane'),
+(3, 'Johnson', 'Michael'),
+(1, 'Williams', 'Emily'),
+(3, 'Brown', 'William'),
+(2, 'Jones', 'Olivia'),
+(3, 'Miller', 'James'),
+(3, 'Davis', 'Sophia'),
+(2, 'Wilson', 'Liam'),
+(1, 'Taylor', 'Emma'),
+(1, 'Anderson', 'Alexander'),
+(2, 'Thomas', 'Ava'),
+(3, 'Martinez', 'Ethan'),
+(3, 'Robinson', 'Isabelle');
 
 
 
