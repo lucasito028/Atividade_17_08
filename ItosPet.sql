@@ -37,17 +37,6 @@ foreign key(TIPO_ID) references TIPO(IDTIPO)
 
 
 
-
-create table SERVICO(
-IDSERVICO int not null auto_increment,
-TIPO_SERVICO varchar(45) not null,
-PRECO double not null,
-primary key(IDSERVICO)
-);
-
-
-
-
 create table PET(
 IDPET int not null auto_increment,
 CLIENTE_ID int not null,
@@ -59,6 +48,7 @@ primary key(IDPET),
 foreign key(CLIENTE_ID) references CLIENTE(IDCLIENTE),
 foreign key(RACA_ID) references RACA(IDRACA)
 );
+
 
 
 
