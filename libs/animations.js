@@ -1,4 +1,4 @@
-function alterarnome(nome){
+function alterurl(nome){
     const urloriginal = window.location.href;
     
     const reatorada = `${urloriginal}/${nome}`;
